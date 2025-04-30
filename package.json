@@ -1,0 +1,24 @@
+{
+  "name": "get-cdids",
+  "version": "1.0.0",
+  "description": "Get all CDIDs from ONS timeseries service",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "get-taxonomy": "node ./scripts/get-taxonomy.js",
+    "get-topics": "node ./scripts/get-topics.js",
+    "get-pages": "node ./scripts/get-pages.js",
+    "get-datasets": "node ./scripts/get-datasets.js",
+    "get-metadata": "node ./scripts/get-metadata.js",
+    "fix-metadata": "node ./scripts/fix-metadata.js",
+    "merge-metadata": "node ./scripts/merge-metadata.js",
+    "get-cdids": "npm-run-all get-taxonomy get-topics get-pages get-datasets get-metadata fix-metadata merge-metadata",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ahmad Barclay",
+  "license": "ISC",
+  "dependencies": {
+    "d3-dsv": "^3.0.1",
+    "npm-run-all": "^4.1.5"
+  }
+}
